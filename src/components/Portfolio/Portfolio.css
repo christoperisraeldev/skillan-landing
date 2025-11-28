@@ -1,0 +1,187 @@
+.portfolio {
+    padding: 6rem 2rem;
+    background: white;
+    position: relative;
+  }
+  
+  .portfolio-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .portfolio-title {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+  }
+  
+  .portfolio-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 3rem;
+  }
+  
+  .portfolio-slider {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+  
+  .portfolio-slide {
+    width: 100%;
+    height: 500px;
+    position: relative;
+  }
+  
+  .portfolio-item {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .portfolio-item img,
+  .portfolio-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .portfolio-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8) 0%,
+      transparent 100%
+    );
+    color: white;
+    padding: 2rem;
+    text-align: left;
+  }
+  
+  .portfolio-info h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .portfolio-info p {
+    opacity: 0.9;
+    font-size: 1rem;
+  }
+  
+  .slider-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  
+  .slider-btn {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .slider-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+  }
+  
+  .slide-indicators {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 10;
+  }
+  
+  .indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .indicator.active {
+    background: white;
+    transform: scale(1.2);
+  }
+  
+  .portfolio-cta {
+    margin-top: 3rem;
+  }
+  
+  .see-more-btn {
+    display: inline-block;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  @media (max-width: 768px) {
+    .portfolio {
+      padding: 4rem 1rem;
+    }
+    
+    .portfolio-title {
+      font-size: 2.5rem;
+    }
+    
+    .portfolio-slide {
+      height: 400px;
+    }
+    
+    .portfolio-info {
+      padding: 1.5rem;
+    }
+    
+    .portfolio-info h3 {
+      font-size: 1.3rem;
+    }
+    
+    .slider-btn {
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
+    }
+  }

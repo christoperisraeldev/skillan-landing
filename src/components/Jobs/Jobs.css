@@ -1,0 +1,133 @@
+.jobs {
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    position: relative;
+  }
+  
+  .jobs-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .jobs-title {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+  }
+  
+  .jobs-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .jobs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+  
+  .job-card {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+  
+  .job-image {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+  }
+  
+  .job-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .job-card:hover .job-image img {
+    transform: scale(1.1);
+  }
+  
+  .job-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(102, 126, 234, 0.8) 0%,
+      rgba(118, 75, 162, 0.8) 100%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .job-card:hover .job-overlay {
+    opacity: 1;
+  }
+  
+  .job-overlay h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .job-overlay p {
+    font-size: 1rem;
+    opacity: 0.9;
+  }
+  
+  .coming-soon {
+    margin-top: 2rem;
+  }
+  
+  .coming-soon-badge {
+    display: inline-block;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+  }
+  
+  @media (max-width: 768px) {
+    .jobs {
+      padding: 4rem 1rem;
+    }
+    
+    .jobs-title {
+      font-size: 2.5rem;
+    }
+    
+    .jobs-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .job-image {
+      height: 250px;
+    }
+  }
