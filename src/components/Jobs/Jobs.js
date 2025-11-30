@@ -6,12 +6,12 @@ const Jobs = () => {
   const jobCategories = [
     {
       title: 'Aluminum Fabricators',
-      image: '/images/aluminum-fabricator.jpg',
+      image: '/images/aluminium fabricator.jpg',
       description: 'Expert aluminum works and fabrication services'
     },
     {
       title: 'Glass and Aluminum Contractors/Specialists',
-      image: '/images/glass-contractor.jpg',
+      image: '/images/glass contractor.jpg',
       description: 'Professional glass and aluminum installation'
     },
     {
